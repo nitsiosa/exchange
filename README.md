@@ -1,7 +1,7 @@
 # Order Book Coding Assignment
 
 
-##Context of the problem
+### Context of the problem
 
 We are running a small exchange and we must ensure that its behaviour is fully deterministic
 and fully compliant with regulations. Our exchange is quite small but very optimized, so even
@@ -12,7 +12,7 @@ properly.
 Your task is to build that verifier. We will check if our exchange is behaving correctly
 comparing its output with the one coming from your assignment
 
-##High level description
+### High level description
 
 An exchange allows the buyers and sellers of a product to discover each other and trade.
 Buyers and sellers (traders) submit orders to the exchange and the exchange applies simple
@@ -23,31 +23,40 @@ possible price they will trade at, and the quantity (number of shares) they wish
 our exchange trades only occur during the processing of a newly posted order, and happen
 immediately, which is known as ‘continuous trading’.
 
-##Matching example
+### Matching example
 As orders arrive at the exchange, they are considered for aggressive matching first against
 the opposite side of the book. Once this is completed, any remaining order quantity will rest
 on their own side of the book. Consider 3 orders have been submitted to the exchange, in
 the following order:
+
 ● Buy 1000 @ 99
+
 ● Buy 1200 @ 98
+
 ● Buy 500 @ 99
+
 
 As there are no Sell orders yet, they rest on the order book as follows (note Buy for 98 is
 lowest priority):
 
 Bids (Buying) Asks (Selling)
 
-Quantity Price
+#### Quantity Price
+
 1000 99
+
 500 99
+
 1200 98
 
-Price Quantity
+
+#### Price Quantity
 
 Price time priority refers to the order in which orders in the book are eligible to be matched
 during the aggressive phase. Orders are first matched in order of price (most aggressive to
 least aggressive), then by arrival time into the book (oldest to newest). A Sell order is now
 submitted, with a limit price that does not cross with any of the existing resting orders:
+
 ● Sell 2000 @ 101
 
 Bids (Buying) Asks (Selling)
