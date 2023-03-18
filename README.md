@@ -1,7 +1,8 @@
 # Order Book Coding Assignment
 
 
-Context of the problem
+##Context of the problem
+
 We are running a small exchange and we must ensure that its behaviour is fully deterministic
 and fully compliant with regulations. Our exchange is quite small but very optimized, so even
 if it supports only one feature, the limit order, it’s hard to make it right. To ensure that our
@@ -11,7 +12,8 @@ properly.
 Your task is to build that verifier. We will check if our exchange is behaving correctly
 comparing its output with the one coming from your assignment
 
-High level description
+##High level description
+
 An exchange allows the buyers and sellers of a product to discover each other and trade.
 Buyers and sellers (traders) submit orders to the exchange and the exchange applies simple
 rules to determine if a trade has occurred. The dominant kind of exchange is a central limit
@@ -21,7 +23,7 @@ possible price they will trade at, and the quantity (number of shares) they wish
 our exchange trades only occur during the processing of a newly posted order, and happen
 immediately, which is known as ‘continuous trading’.
 
-Matching example
+##Matching example
 As orders arrive at the exchange, they are considered for aggressive matching first against
 the opposite side of the book. Once this is completed, any remaining order quantity will rest
 on their own side of the book. Consider 3 orders have been submitted to the exchange, in
