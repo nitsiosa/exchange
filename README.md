@@ -196,7 +196,7 @@ After all the orders in the input file have been processed, the remaining buy an
 
 The application is designed to be extendable, allowing for the addition of new order types and matching algorithms. It also includes unit tests to ensure that the core functionality of the application is working as intended.
 
-The solution assumes that the files will be be well formated with valid orders, no further checks will be done on the application on the format or the content of the files. 
+**The solution assumes that the files will be be well formated with valid orders, no further checks will be done on the application on the format or the content.**
 
 in order to build the application please use maven and the following command 
 
@@ -214,6 +214,9 @@ alternatvely the application can be executed using the verifier.jar file that ge
 ```
 java -jar cli/target/verifier.jar test1.txt
 ```
+
+if you need to reset the exchange simulator and remove any remaining orders please delete the file **RemainingOrderBackup.txt**, that gets created on the execution directory up upon completion of the script.
+
 for the development and the testing of the solution the following OS, maven and java vesions have been used 
 ```
 Apache Maven 3.6.3
@@ -221,7 +224,6 @@ Maven home: /usr/share/maven
 Java version: 17.0.6, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-17-oracle
 Default locale: en_GB, platform encoding: UTF-8
 OS name: "linux", version: "5.19.0-35-generic", arch: "amd64", family: "unix"
-
 ```
 
 
