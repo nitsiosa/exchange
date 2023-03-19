@@ -38,12 +38,15 @@ the following order:
 As there are no Sell orders yet, they rest on the order book as follows (note Buy for 98 is
 lowest priority):
 
+```
   Bids (Buying)   |   Asks (Selling)
 ---------------------------------------
 Quantity | Price  |  Price | Quantity
   1000   |  99    |   
    500   |  99    |   
   1200   |  99    |   
+```
+
 
 Price time priority refers to the order in which orders in the book are eligible to be matched
 during the aggressive phase. Orders are first matched in order of price (most aggressive to
@@ -52,13 +55,14 @@ submitted, with a limit price that does not cross with any of the existing resti
 
 ● Sell 2000 @ 101
 
+```
   Bids (Buying)   |   Asks (Selling)
 ---------------------------------------
 Quantity | Price  |  Price | Quantity
   1000   |  99    |   101  |   2000
    500   |  99    |   
   1200   |  99    |   
-
+```
 
 A **Sell** order is now submitted that is aggressively-priced: 
 
@@ -73,11 +77,12 @@ i.e.
         ● Buy 500 @ 99 is matched second (as it is at the highest price level and arrived after the BUY 1000 @ 99 order)
         ● Buy 500 @ 98 is matched third (as it is at a lower price. This partially fills the resting order of 1200, leaving 700 in the order book)
 
+```
   Bids (Buying)   |   Asks (Selling)
 ---------------------------------------
 Quantity | Price  |  Price | Quantity
   700    |  98    |   101  |   2000
-   
+```   
 
 
 ### Limit order handling
@@ -92,7 +97,10 @@ value of ‘B’ for **Buy** or ‘S’ for **Sell**. Price and quantity will bo
 handled as a string.
 
 Example 1
+
 In this example no buyer or seller is willing the pay the opposing price so no trades occur
+
+```
 $ cat test1.txt
 10000,B,98,25500
 10005,S,105,20000
@@ -106,22 +114,27 @@ $ ./exchange &lt; test1.txt
             | 103 100
             | 105 20,000
 $
+```
+
 MD5 (output) = 8ff13aad3e61429bfb5ce0857e846567
 
 Which represents the following order book:
 
+```
   Bids (Buying)   |   Asks (Selling)
 ---------------------------------------
 Quantity | Price  |  Price | Quantity
   50000  |  99    |   100  |   500
   25000  |  99    |   100  |  10000
-         |        |   103  |   100
-         |        |   105  |  20000
-  
+                  |   103  |   100
+                  |   105  |  20000
+```
+
 Example 2
 
 If an order is then submitted to Buy 16000 @ 105p, it will fill completely against the resting
 orders, producing the following output:
+```
 $ cp test1.txt test2.txt
 $ echo &quot;10006,B,105,16000&quot; &gt;&gt; test2.txt
 $ ./exchange &lt; test2.txt
@@ -132,6 +145,7 @@ trade 10006,10005,105,5400
     50,000 99 | 105 14,600
     25,500 98 |
 $
+```
 
 MD5 (output) = ce8e7e5ab26ab5a7db6b7d30759cf02e
 
@@ -139,9 +153,9 @@ Trade output must indicate the aggressing order-id, the resting order-id, the pr
 and the quantity traded, followed by a newline.
 
 The order book output should be formatted to a fixed width using the following format:
-
+```
 000,000,000 000000 | 000000 000,000,000
-
+```
 If a value is too small to cover the whole reserved area, it should be left padded with spaces
 
 Please note that once submitted, orders are not modified by further input. There is no need
