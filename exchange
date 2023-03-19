@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 <trade-order-file-name>"
+    exit 1
+fi
+
+order_file="$1"
+
+if [ ! -f "$order_file" ]; then
+    echo "Error: $order_file does not exist"
+    exit 1
+fi
+
+java -jar "cli/target/verifier.jar" $order_file

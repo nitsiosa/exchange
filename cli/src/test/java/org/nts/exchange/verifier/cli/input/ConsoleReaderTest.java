@@ -1,4 +1,4 @@
-package org.cliAdapter;
+package org.nts.exchange.verifier.cli.input;
 
 import static org.junit.Assert.assertEquals;
 

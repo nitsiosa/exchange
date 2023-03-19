@@ -37,12 +37,9 @@ public class Exchange {
 
 	public Exchange(String filename) throws IOException {
 		OrderBook        orderBook        = new InMemoryOrderBook();
-		OrderBookMonitor orderBookMonitor = new OrderBookMonitor(orderBook);
 		TradeStore       tradeStore       = new InMemoryTradeStore();
 		MatchingEngine   matchingEngine   = new PriceTimePriorityMatchingEngine(orderBook, tradeStore);
-				
-		orderBookMonitor.startMonitoring();
-		
+	
 		if(new File(outputFileName).exists()) {
 			OrderReader backupReader = new FileOrderReader(outputFileName,matchingEngine);
 			backupReader.parse();
