@@ -11,7 +11,6 @@ import org.nts.exchange.verifier.core.matchingengine.MatchingEngine;
 import org.nts.exchange.verifier.core.matchingengine.PriceTimePriorityMatchingEngine;
 import org.nts.exchange.verifier.core.orderbook.InMemoryOrderBook;
 import org.nts.exchange.verifier.core.orderbook.OrderBook;
-import org.nts.exchange.verifier.core.orderbook.OrderBookMonitor;
 import org.nts.exchange.verifier.core.tradestore.InMemoryTradeStore;
 import org.nts.exchange.verifier.core.tradestore.TradeStore;
 

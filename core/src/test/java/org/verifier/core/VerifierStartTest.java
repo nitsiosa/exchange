@@ -12,7 +12,6 @@ import org.nts.exchange.verifier.core.matchingengine.PriceTimePriorityMatchingEn
 import org.nts.exchange.verifier.core.matchingengine.exception.InvalidQuantityException;
 import org.nts.exchange.verifier.core.orderbook.InMemoryOrderBook;
 import org.nts.exchange.verifier.core.orderbook.OrderBook;
-import org.nts.exchange.verifier.core.orderbook.OrderBookMonitor;
 import org.nts.exchange.verifier.core.orderbook.OrderSide;
 import org.nts.exchange.verifier.core.tradestore.InMemoryTradeStore;
 import org.nts.exchange.verifier.core.tradestore.TradeStore;
@@ -22,17 +21,13 @@ class VerifierStartTest {
 
 	private OrderBook        orderBook;
 	private TradeStore       tradeStore;
-	private OrderBookMonitor bookMonitor;
 
 	@BeforeEach
 	public void setUp() {
 		orderBook      = new InMemoryOrderBook();
-		bookMonitor    = new OrderBookMonitor(orderBook);
 		tradeStore     = new InMemoryTradeStore();
 		
 		new PriceTimePriorityMatchingEngine(orderBook, tradeStore);
-		
-		bookMonitor.startMonitoring();
 	}
 
 	@Test
