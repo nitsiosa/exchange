@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.008" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.017" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-oracle/lib"/>
-    <property name="sun.java.command" value="/home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire/surefirebooter15543975950585095839.jar /home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire 2023-03-19T00-12-07_600-jvmRun1 surefire1709057088005289810tmp surefire_017475742937243578297tmp"/>
+    <property name="sun.java.command" value="/home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire/surefirebooter11352475400648280277.jar /home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire 2023-03-19T01-33-08_213-jvmRun1 surefire2127064528457679692tmp surefire_011597746375829749191tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/andreas/eclipse-workspace/verifier/verifier/core/target/test-classes:/home/andreas/eclipse-workspace/verifier/verifier/core/target/classes:/home/andreas/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/andreas/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/home/andreas/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/home/andreas/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/home/andreas/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/andreas/.m2/repository/org/mockito/mockito-core/5.1.1/mockito-core-5.1.1.jar:/home/andreas/.m2/repository/net/bytebuddy/byte-buddy/1.12.22/byte-buddy-1.12.22.jar:/home/andreas/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.22/byte-buddy-agent-1.12.22.jar:/home/andreas/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/andreas/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.11.0/log4j-1.2-api-2.11.0.jar:/home/andreas/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/home/andreas/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/andreas/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/home/andreas/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar:/home/andreas/.m2/repository/org/apache/logging/log4j/log4j-core/2.12.1/log4j-core-2.12.1.jar:/home/andreas/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/andreas/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire/surefirebooter15543975950585095839.jar"/>
+    <property name="surefire.real.class.path" value="/home/andreas/eclipse-workspace/verifier/verifier/core/target/surefire/surefirebooter11352475400648280277.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+9-LTS-190"/>
     <property name="user.name" value="andreas"/>
@@ -53,11 +53,11 @@
   </properties>
   <testcase name="getOrders_shouldReturnAllOrders" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0"/>
   <testcase name="getSellOrdersAtPrice_shouldReturnSellOrdersAtSpecifiedPrice" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
-  <testcase name="getNewOrders_shouldReturnEmptyListIfNoNewOrders" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0"/>
-  <testcase name="getBuyOrdersAt" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.002"/>
-  <testcase name="addOrder_shouldAddOrderToOrderBook" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
+  <testcase name="getNewOrders_shouldReturnEmptyListIfNoNewOrders" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
+  <testcase name="getBuyOrdersAt" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.004"/>
+  <testcase name="addOrder_shouldAddOrderToOrderBook" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.002"/>
   <testcase name="removeListener_shouldRemoveListener" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
   <testcase name="addOrder_shouldNotAddDuplicateOrder" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
-  <testcase name="addListener_shouldAddListener" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0"/>
+  <testcase name="addListener_shouldAddListener" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0.001"/>
   <testcase name="removeOrder_shouldRemoveOrderFromOrderBook" classname="org.verifier.core.orderbook.InMemoryOrderBookTest" time="0"/>
 </testsuite>
