@@ -182,4 +182,46 @@ by a clarification email, it is expected to be documented and explained with a r
 Please note that the md5s of the expected output for the example inputs have been
 provided for your own convenience
 
+### Solution 
+
+The solution has been writen in java. The project contains two modules core and cli, the core contains the main components of the exchange simulator; a matching engine,an orderbook and a Trade book. 
+
+The application is a simple order matching engine that takes the  buy and sell orders from a file, matches the orders, and outputs the trades and remaining orders to the console and to a file.
+
+When the application is run, the user has to enter the path of the input file containing the orders. The orders are parsed from the input file and added to the order book, which is managed by the matching engine.
+
+The matching engine matches buy and sell orders based on their price and quantity. When a match is found, a trade is generated and added to the trade store. The trade, along with the remaining orders, are then printed to the console.
+
+After all the orders in the input file have been processed, the remaining buy and sell orders are written to a back up file RemainingOrderBackup.txt
+
+The application is designed to be extendable, allowing for the addition of new order types and matching algorithms. It also includes unit tests to ensure that the core functionality of the application is working as intended.
+
+The solution assumes that the files will be be well formated with valid orders, no further checks will be done on the application on the format or the content of the files. 
+
+in order to build the application please use maven and the following command 
+
+```
+mvn clean install 
+```
+
+on the root directory there is a bash script that will runn the application using java(the appl is bundled in one fat jar that conains all nessesary libraries)
+
+```
+./exchange test1.txt
+```
+
+alternatvely the application can be executed using the verifier.jar file that gets created in the cli/target/ directory after building the application. 
+```
+java -jar cli/target/verifier.jar test1.txt
+```
+for the development and the testing of the solution the following OS, maven and java vesions have been used 
+```
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 17.0.6, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-17-oracle
+Default locale: en_GB, platform encoding: UTF-8
+OS name: "linux", version: "5.19.0-35-generic", arch: "amd64", family: "unix"
+
+```
+
 
