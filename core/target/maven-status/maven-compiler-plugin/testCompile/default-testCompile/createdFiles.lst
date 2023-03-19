@@ -1,0 +1,9 @@
+org/verifier/core/tradestore/InMemoryTradeStoreTest.class
+org/verifier/core/matchingengine/PriceTimePriorityMatchingEngineTest.class
+org/verifier/core/orderbook/OrderBookMonitorTest$2.class
+org/verifier/core/orderbook/InMemoryOrderBookTest.class
+org/verifier/core/orderbook/OrderBookMonitorTest.class
+org/verifier/core/orderbook/InMemoryOrderBookTest$1.class
+org/verifier/core/orderbook/OrderBookMonitorTest$1.class
+org/verifier/core/orderbook/InMemoryOrderBookTest$2.class
+org/verifier/core/VerifierStartTest.class

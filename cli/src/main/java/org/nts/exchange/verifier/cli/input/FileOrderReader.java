@@ -94,7 +94,7 @@ public class FileOrderReader implements OrderReader {
 	 * @return A formatted string representation of the input Buy Order object.
 	 */
 	private String formatBuyOrderOutPutString(Order order) {
-		return String.format("%1$9d %2$6d", order.getQuantity(), order.getPrice());
+		return String.format("%1$,9d %2$,6d", order.getQuantity(), order.getPrice());
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class FileOrderReader implements OrderReader {
 	 * @return A formatted string representation of the input Sell Order object.
 	 */
 	private String formatSellOrderOutPutString(Order order) {
-		return String.format("%1$6d %2$9d", order.getPrice(), order.getQuantity());
+		return String.format("%1$,6d %2$,9d", order.getPrice(), order.getQuantity());
 	}
 
 	private void readStringAndAddOrder(String line) {
