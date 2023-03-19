@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.verifier.core.orderbook.OrderBookMonitorTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.3 s - in org.verifier.core.orderbook.OrderBookMonitorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.01 s - in org.verifier.core.orderbook.OrderBookMonitorTest

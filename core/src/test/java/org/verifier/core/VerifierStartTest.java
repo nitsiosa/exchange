@@ -6,16 +6,16 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.verifier.core.Order;
-import org.verifier.core.Trade;
-import org.verifier.core.matchingengine.PriceTimePriorityMatchingEngine;
-import org.verifier.core.matchingengine.exception.InvalidQuantityException;
-import org.verifier.core.orderbook.InMemoryOrderBook;
-import org.verifier.core.orderbook.OrderBook;
-import org.verifier.core.orderbook.OrderBookMonitor;
-import org.verifier.core.orderbook.OrderSide;
-import org.verifier.core.tradestore.InMemoryTradeStore;
-import org.verifier.core.tradestore.TradeStore;
+import org.nts.exchange.verifier.core.Order;
+import org.nts.exchange.verifier.core.Trade;
+import org.nts.exchange.verifier.core.matchingengine.PriceTimePriorityMatchingEngine;
+import org.nts.exchange.verifier.core.matchingengine.exception.InvalidQuantityException;
+import org.nts.exchange.verifier.core.orderbook.InMemoryOrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBookMonitor;
+import org.nts.exchange.verifier.core.orderbook.OrderSide;
+import org.nts.exchange.verifier.core.tradestore.InMemoryTradeStore;
+import org.nts.exchange.verifier.core.tradestore.TradeStore;
 
 
 class VerifierStartTest {
@@ -41,7 +41,7 @@ class VerifierStartTest {
 		orderBook.addOrder(new Order("1", OrderSide.BUY,99, 1000));
 		orderBook.addOrder(new Order("2", OrderSide.BUY,99, 500));
 		orderBook.addOrder(new Order("3", OrderSide.BUY,98, 1200));
-		orderBook.getBuyOrders().stream().map(order ->"testMatchingExample "+order).forEach(System.out::println);
+		
 		
 		// Add some sell orders
 		orderBook.addOrder(new Order("4", OrderSide.SELL,101, 2000));

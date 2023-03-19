@@ -8,7 +8,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.verifier.core.Trade;
+import org.nts.exchange.verifier.core.Trade;
+import org.nts.exchange.verifier.core.tradestore.InMemoryTradeStore;
 
 class InMemoryTradeStoreTest {
 

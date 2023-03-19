@@ -7,14 +7,14 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.verifier.core.Order;
-import org.verifier.core.Trade;
-import org.verifier.core.matchingengine.PriceTimePriorityMatchingEngine;
-import org.verifier.core.orderbook.InMemoryOrderBook;
-import org.verifier.core.orderbook.OrderBook;
-import org.verifier.core.orderbook.OrderSide;
-import org.verifier.core.tradestore.InMemoryTradeStore;
-import org.verifier.core.tradestore.TradeStore;
+import org.nts.exchange.verifier.core.Order;
+import org.nts.exchange.verifier.core.Trade;
+import org.nts.exchange.verifier.core.matchingengine.PriceTimePriorityMatchingEngine;
+import org.nts.exchange.verifier.core.orderbook.InMemoryOrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderSide;
+import org.nts.exchange.verifier.core.tradestore.InMemoryTradeStore;
+import org.nts.exchange.verifier.core.tradestore.TradeStore;
 
 public class PriceTimePriorityMatchingEngineTest {
 

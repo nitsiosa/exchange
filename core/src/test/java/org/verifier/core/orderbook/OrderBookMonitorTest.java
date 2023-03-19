@@ -3,7 +3,11 @@ package org.verifier.core.orderbook;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.verifier.core.Order;
+import org.nts.exchange.verifier.core.Order;
+import org.nts.exchange.verifier.core.orderbook.OrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBookListener;
+import org.nts.exchange.verifier.core.orderbook.OrderBookMonitor;
+import org.nts.exchange.verifier.core.orderbook.OrderSide;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;

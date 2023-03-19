@@ -10,7 +10,11 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.verifier.core.Order;
+import org.nts.exchange.verifier.core.Order;
+import org.nts.exchange.verifier.core.orderbook.InMemoryOrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBook;
+import org.nts.exchange.verifier.core.orderbook.OrderBookListener;
+import org.nts.exchange.verifier.core.orderbook.OrderSide;
 
 class InMemoryOrderBookTest {
 
